@@ -1,0 +1,199 @@
+#include <iostream.h>
+#include <stdio.h>
+int S[10], top;
+int dasar,A,B,C,D,E,F,G,H,I,J,K,jumnode;
+void awal();
+void masuk();
+void cjml();
+void cpre();
+void cpost();
+void cino();
+void test();
+void main()
+{
+	int pil, kondisi=1;
+	awal();
+
+	cout <<"    NIM : Anugrah Bagus Susilo " <<endl;
+	cout <<"    Nama  : 1511600494" <<endl;
+	cout <<"    =================" <<endl;
+	cout <<"  " <<endl;
+	cout <<"    TUGAS STRUKTUR DATA" <<endl;
+	cout <<"1. Inputan berupa angka / numerik" <<endl;
+	cout <<"2. Pilihan 6 untuk membuktikan true dan false" <<endl;
+	cout <<"   seperti pada gambar soal" <<endl;
+
+	while (kondisi) {
+		printf("\n1. input node");
+		printf("\n2. cetak jumlah node");
+		printf("\n3. Cetak Pre order");
+		printf("\n4. cetak post order");
+		printf("\n5. Cetak in order");
+		printf("\n6. Validasi/test alur fungsi");
+		printf("\n7. Keluar");
+
+		printf("\nMasukkan pilihan (1-7) : ");
+		scanf("%i", &pil);
+
+		switch(pil) {
+			case 1 : masuk(); break;
+			case 2 : cjml(); break;
+			case 3 : cpre(); break;
+			case 4 : cpost(); break;
+			case 5 : cino(); break;
+			case 6 : test();break;
+			case 7 : kondisi=0; break;
+		}
+	}
+}
+void awal()
+{
+	top = -1;
+}
+
+void masuk()
+{
+ jumnode=0;
+ cout <<" " <<endl;
+ cout << "input angka nilai dasar : "; cin >> dasar;
+ cout << "input angka nila A: "; cin >> A;
+ jumnode=jumnode+1;
+ cout << "input angka nila B: "; cin >> B;
+  jumnode=jumnode+1;
+ cout << "input angka nila C: "; cin >> C;
+  jumnode=jumnode+1;
+ cout << "input angka nila D: "; cin >> D;
+  jumnode=jumnode+1;
+ cout << "input angka nila E: "; cin >> E;
+  jumnode=jumnode+1;
+ cout << "input angka nila F: "; cin >> F;
+  jumnode=jumnode+1;
+ cout << "input angka nila G: "; cin >> G;
+  jumnode=jumnode+1;
+ cout << "input angka nila H: "; cin >> H;
+  jumnode=jumnode+1;
+ cout << "input angka nila I: "; cin >> I;
+  jumnode=jumnode+1;
+ cout << "input angka nila J: "; cin >> J;
+  jumnode=jumnode+1;
+ cout << "input angka nila K: "; cin >> K;
+  jumnode=jumnode+1;
+
+  cout <<" " <<endl;
+  cout <<"1. Inputan : " <<endl;
+  cout <<"   A" <<" B" <<" C" <<" D" <<" E" <<" F" <<" G" <<" H" <<" I" <<" J" <<" K" <<endl;
+  cout <<"   "<<A <<" " <<B <<" " <<C <<" " <<D <<" " <<E <<" " <<F <<" " <<G <<" " <<H <<" " <<I <<" " <<J <<" " <<K <<endl;
+  cout <<" " <<endl;
+ }
+
+void cjml()
+{
+  cout <<" " <<endl;
+  cout <<"2. Jumlah node : " <<jumnode <<endl;
+  cout <<"    ketinggian : 4 " <<endl;
+  cout <<"    level      : 4 " <<endl;
+  cout <<" " <<endl;
+  }
+
+void cpre()
+{
+  cout <<" " <<endl;
+  cout <<"3. Preorder : " <<endl;
+  cout <<"    A" <<" B" <<" D" <<" E" <<" H" <<" I" <<" C" <<" F" <<" J" <<" K" <<" G" <<endl;
+  cout <<"    "<<A <<" " <<B <<" " <<D <<" " <<E <<" " <<H <<" " <<I <<" " <<C <<" " <<F <<" " <<J <<" " <<K <<" " <<G <<endl;
+  cout <<" " <<endl;
+}
+
+void cpost()
+{
+  cout <<" " <<endl;
+  cout <<"4. Postorder : " <<endl;
+  cout <<"   D" <<" H" <<" I" <<" E" <<" B" <<" J" <<" K" <<" F" <<" G" <<" C" <<" A" <<endl;
+  cout <<"   "<<D <<" " <<H <<" " <<I <<" " <<E <<" " <<B <<" " <<J <<" " <<K <<" " <<F <<" " <<G <<" " <<C <<" " <<A <<endl;
+  cout <<" " <<endl;
+}
+
+void cino()
+{
+  cout <<" " <<endl;
+  cout <<"5. Inorder : " <<endl;
+  cout <<"    D" <<" B" <<" H" <<" E" <<" I" <<" A" <<" J" <<" F" <<" K" <<" C" <<" G" <<endl;
+  cout <<"    "<<D <<" " <<B <<" " <<H <<" " <<E <<" " <<I <<" " <<A <<" " <<J <<" " <<F <<" " <<K <<" " <<C <<" " <<G <<endl;
+  cout <<" " <<endl;
+}
+
+void test()
+{
+ int dasar,A,B,C,D,E,F,G,H,I,J,K,node;
+ cout <<" " <<endl;
+ cout << "input angka nilai dasar : "; cin >> dasar;
+ cout << "input angka nilai A: "; cin >> A;
+
+ if(dasar>A)
+  {
+	{
+	cout << "input angka nilai C: "; cin >> C;
+	}
+	if (A>C)
+	 {
+	 cout << "  input angka nilai G: "; cin >> G;
+	 cout <<"         node  : " << "A" <<", " <<"C" <<", " <<"G" <<endl;
+	 cout <<"         nilai : " << A <<", " <<C <<", " <<G;
+	 cout <<" " <<endl;
+	 }
+	else
+	{
+	 cout << "  input angka nilai F: "; cin >> F;
+	  if (C>F)
+		 {
+		 cout << "  input angka nilai K: "; cin >> K;
+		 cout <<"         node  : " <<"A" <<", " <<"C" <<", " <<"F" <<", " <<"K" <<endl;
+		 cout <<"         nilai : " <<A <<", " <<C <<", " <<F <<", " <<K;
+		 cout <<" " <<endl;
+		 }
+	else
+		 {
+		 cout << "  input angka nilai J: "; cin >> J;
+		 cout <<"         node  : " <<"A" <<", " <<"C" <<", " <<"F" <<", " <<"J" <<endl;
+		 cout <<"         nilai : " <<A <<", " <<C <<", " <<F <<", " <<J;
+		 cout <<" " <<endl;
+		 }
+	  }
+  }
+ else
+	{
+		{
+		 cout << "input angka nilai B: "; cin >> B;
+		}
+		 if (A>B)
+		 {
+			 {
+			 cout << "input angka nilai E: "; cin >> E;
+			 }
+				{
+				if (B>E)
+				 {
+					cout << "  input angka nilai I: "; cin >> I;
+					cout <<"         node  : " << "A" <<", " <<"B" <<", " <<"E" <<", " <<"I" <<endl;
+					cout <<"         nilai : " << A <<", " <<B <<", " <<E <<", " <<I;
+					cout <<" " <<endl;
+				 }
+				else
+					{
+					 cout << "  input angka nilai H: "; cin >> H;
+					 cout <<"         node  : " <<"A" <<", " <<"B" <<", " <<"E" <<", " <<"H" <<endl;
+					 cout <<"         nilai : " <<A <<", " <<B <<", " <<E <<", " <<H;
+					 cout <<" " <<endl;
+					}
+			  }
+			}
+		  else
+		  {
+			cout << "input angka nilai D: "; cin >> D;
+			cout <<"         node  : " << "A" <<", " <<"B" <<", " <<"D" <<endl;
+			cout <<"         nilai : " << A <<", " <<B <<", " <<D;
+			cout <<" " <<endl;
+			}
+	}
+
+}
